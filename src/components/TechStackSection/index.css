@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --sky: #38bdf8;
+  --sky-dark: #0ea5e9;
+  --soft: #f5fbff;
+  --text: #0f172a;
+}
+
+.tech-section {
+  padding: 120px 80px;
+  background: white;
+  font-family: "Inter", sans-serif;
+}
+
+.tech-header {
+  max-width: 700px;
+  margin-bottom: 80px;
+}
+
+.tech-header .eyebrow {
+  font-size:26px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sky-dark);
+}
+
+.tech-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-top: 12px;
+  color: var(--text);
+}
+
+/* GRID */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+
+/* CARD */
+.tech-card {
+  background: var(--soft);
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 65px rgba(56, 189, 248, 0.35);
+}
+
+.tech-card h3 {
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sky-dark);
+  margin-bottom: 26px;
+}
+
+/* ITEMS */
+.tech-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #334155;
+  transition: transform 0.25s ease;
+}
+
+.tech-item svg {
+  font-size: 1.3rem;
+  color: #94a3b8;
+}
+
+.tech-item:hover {
+  transform: translateX(6px);
+}
+
+.tech-item:hover svg {
+  color: var(--sky-dark);
+}
+
+/* CTA */
+.tech-cta {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.tech-cta button {
+  background: linear-gradient(135deg, var(--sky), var(--sky-dark));
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 14px 40px rgba(56, 189, 248, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .tech-section {
+    padding: 90px 30px;
+  }
+
+  .tech-header h2 {
+    font-size: 2.2rem;
+  }
+}

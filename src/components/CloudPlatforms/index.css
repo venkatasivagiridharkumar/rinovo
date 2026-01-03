@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --sky: #38bdf8;
+  --sky-dark: #0ea5e9;
+  --white: #ffffff;
+  --text: #0f172a;
+  --glass: rgba(255, 255, 255, 0.9);
+}
+
+/* SECTION */
+.cloud-section {
+  position: relative;
+  padding: 120px 80px;
+  background: url("https://images.unsplash.com/photo-1535223289827-42f1e9919769")
+    center / cover no-repeat;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* SKY BLUE OVERLAY */
+.cloud-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(224, 242, 254, 0.95),
+    rgba(255, 255, 255, 0.92)
+  );
+  z-index: 1;
+}
+
+/* CONTENT WRAPPER */
+.cloud-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* TEXT */
+.cloud-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  letter-spacing: -0.03em;
+}
+
+.cloud-text h2 span {
+  color: var(--sky);
+}
+
+.cloud-text p {
+  margin-top: 22px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #334155;
+}
+
+/* LOGOS GRID */
+.cloud-logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* PLATFORM CARD */
+.platform-card {
+  background: var(--glass);
+  border-radius: 18px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.platform-card svg {
+  font-size: 2.2rem;
+  color: var(--sky-dark);
+}
+
+.platform-card span {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.platform-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 30px 65px rgba(56, 189, 248, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cloud-section {
+    padding: 90px 30px;
+  }
+
+  .cloud-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .cloud-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
