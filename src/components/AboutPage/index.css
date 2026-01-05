@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --sky: #38bdf8;
+  --sky-dark: #0ea5e9;
+  --dark: #020617;
+  --muted: #64748b;
+  --bg: #f8fbff;
+}
+
+.about {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+}
+
+/* HERO */
+.about-hero {
+  padding: 140px 80px 110px;
+  max-width: 1100px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sky-dark);
+}
+
+.about-hero h1 {
+  font-size: 3.8rem;
+  margin: 18px 0;
+}
+
+.about-hero h1 span {
+  color: var(--sky-dark);
+}
+
+.about-hero p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* MISSION */
+.about-mission {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  padding: 100px 80px;
+  background: var(--bg);
+}
+
+.mission-text h2 {
+  font-size: 2.4rem;
+}
+
+.highlight {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.mission-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mission-stats h3 {
+  font-size: 2.2rem;
+  color: var(--sky-dark);
+}
+
+/* HOW */
+.about-how {
+  padding: 120px 80px;
+}
+
+.about-how h2 {
+  font-size: 2.6rem;
+  margin-bottom: 60px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+
+.how-card {
+  padding: 34px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(2,6,23,0.08);
+}
+
+/* CLOUD */
+.about-cloud {
+  padding: 110px 80px;
+  background: linear-gradient(135deg, #e0f2fe, #ffffff);
+}
+
+.cloud-list {
+  display: flex;
+  gap: 26px;
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+/* INDUSTRIES */
+.about-industries {
+  padding: 120px 80px;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.industry-card {
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--bg);
+}
+
+/* TRUST */
+.about-trust {
+  padding: 110px 80px;
+  background: #020617;
+  color: white;
+}
+
+.trust-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 40px;
+}
+
+.brand {
+  opacity: 0.85;
+  letter-spacing: 0.08em;
+}
+
+/* CTA */
+.about-cta {
+  padding: 140px 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+}
+
+.cta-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.btn {
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: white;
+  color: #0ea5e9;
+}
+
+.btn.outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-hero,
+  .about-mission,
+  .about-how,
+  .about-cloud,
+  .about-industries,
+  .about-trust,
+  .about-cta {
+    padding: 80px 30px;
+  }
+
+  .about-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+}

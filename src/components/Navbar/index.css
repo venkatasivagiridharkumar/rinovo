@@ -32,6 +32,10 @@
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--dark);
+  text-decoration: none!important;
+}
+.logo-text-decoration{
+  text-decoration: none;
 }
 
 .nav-logo span {

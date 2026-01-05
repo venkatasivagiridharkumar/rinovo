@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
+import { Link } from "react-router";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -8,30 +9,28 @@ export default function Navbar() {
     <header className="navbar">
       <div className="nav-container">
         {/* LOGO */}
+        <Link to="/" className="logo-text-decoration">
         <div className="nav-logo">
           Rinovo<span>.</span>
-        </div>
+        </div></Link>
 
         {/* DESKTOP NAV */}
         <nav className={`nav-links ${open ? "open" : ""}`}>
-          <a href="#services">Services</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <Link to="/services">Services</Link>
+          <Link to="/solutions">Solutions</Link>
+          <Link to="/work">Work</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
 
-          {/* Mobile CTA */}
-          <a href="#contact" className="nav-cta mobile-cta">
+          <Link to="/contact" className="nav-cta mobile-cta">
             Start a Project
-          </a>
+          </Link>
         </nav>
 
-        {/* DESKTOP CTA */}
-        <a href="#contact" className="nav-cta desktop-cta">
+        <Link to="/contact" className="nav-cta desktop-cta">
           Start a Project
-        </a>
+        </Link>
 
-        {/* HAMBURGER */}
         <div
           className={`hamburger ${open ? "active" : ""}`}
           onClick={() => setOpen(!open)}
